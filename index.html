@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
+    body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #F8F8F8; color: #333; margin: 0; }
+    h1,h2,h3 { font-weight: 700; }
+    h2 { text-align: center; margin-top: 2em; }
+
     /* Hero / Banner */
     #header {
       background: linear-gradient(135deg, #FFB800, #FFD95A);
@@ -25,37 +29,23 @@
       justify-content: center;
       gap: 2em;
     }
-    #header nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1em;
-      transition: color 0.3s;
-    }
+    #header nav ul li a { color: #fff; text-decoration: none; font-weight: bold; font-size: 1.1em; transition: color 0.3s; }
     #header nav ul li a:hover { color: #fff0c1; }
 
     /* Palvelut / features */
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2em;
-      justify-content: center;
-      margin-top: 2em;
-    }
+    .features { display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; margin-top: 2em; }
     .features article {
       background: #fff;
       border-radius: 1em;
-      padding: 2em;
+      padding: 1em;
       box-shadow: 0 6px 20px rgba(0,0,0,0.12);
       width: 300px;
       transition: transform 0.3s, box-shadow 0.3s;
       text-align: center;
     }
-    .features article:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    }
-    .features article h3 { margin-top: 1em; }
+    .features article:hover { transform: translateY(-8px); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+    .features article img { width: 100%; border-radius: 1em; margin-bottom: 1em; }
+    .features article h3 { margin-top: 0.5em; }
     .features article p { margin: 1em 0; }
 
     /* CTA napit */
@@ -69,39 +59,15 @@
       display: inline-block;
       text-decoration: none;
     }
-    .button.primary:hover, .button.fit.primary:hover {
-      background-color: #FF9F00;
-    }
+    .button.primary:hover, .button.fit.primary:hover { background-color: #FF9F00; }
 
     /* Lomake */
-    form label {
-      font-weight: bold;
-      margin-top: 1em;
-      display: block;
-    }
-    form input, form select, form textarea {
-      width: 100%;
-      padding: 0.6em;
-      margin-top: 0.3em;
-      border-radius: 0.5em;
-      border: 1px solid #ccc;
-    }
-    form button {
-      margin-top: 1.5em;
-    }
+    form label { font-weight: bold; margin-top: 1em; display: block; }
+    form input, form select, form textarea { width: 100%; padding: 0.6em; margin-top: 0.3em; border-radius: 0.5em; border: 1px solid #ccc; }
+    form button { margin-top: 1.5em; }
 
     /* Footer */
-    #footer {
-      text-align: center;
-      padding: 2em;
-      background: #333;
-      color: #fff;
-    }
-
-    /* Yleinen tyyli */
-    body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #F8F8F8; color: #333; margin: 0; }
-    h1, h2, h3 { font-weight: 700; }
-    h2 { text-align: center; margin-top: 2em; }
+    #footer { text-align: center; padding: 2em; background: #333; color: #fff; }
   </style>
 </head>
 <body>
@@ -123,8 +89,10 @@
   <div class="inner">
     <h2>Palvelumme</h2>
     <div class="features">
+
       <!-- Siivouspaketti -->
       <article>
+        <img src="assets/images/clean.jpg" alt="Siivouspaketti">
         <span class="icon fa-solid fa-broom fa-2x"></span>
         <div class="content">
           <h3>Siivouspaketti</h3>
@@ -132,8 +100,10 @@
           <a href="#order" class="button primary">Tilaa siivous</a>
         </div>
       </article>
+
       <!-- Huolenpito / Hoivapaketti -->
       <article>
+        <img src="assets/images/hoiva.jpg" alt="Hoivapaketti">
         <span class="icon fa-solid fa-heart fa-2x"></span>
         <div class="content">
           <h3>Huolenpito & Ajanvietto</h3>
@@ -141,6 +111,7 @@
           <a href="#order" class="button primary">Tilaa hoiva</a>
         </div>
       </article>
+
       <!-- Kombinaatiopaketti -->
       <article>
         <span class="icon fa-solid fa-star fa-2x"></span>
@@ -150,6 +121,7 @@
           <a href="#order" class="button primary">Tilaa kokonaispaketti</a>
         </div>
       </article>
+
     </div>
   </div>
 </section>
@@ -158,7 +130,7 @@
 <section id="order" class="wrapper style3 special">
   <div class="inner">
     <h2>Tilaa palvelu</h2>
-    <form action="https://formspree.io/f/xxxxxxx" method="POST">
+    <form action="https://formspree.io/f/mzdzolld" method="POST">
       <label for="service">Valitse palvelu:</label>
       <select name="service" id="service" required>
         <option value="">-- Valitse --</option>
@@ -185,20 +157,4 @@
       <button type="submit" class="button fit primary">Lähetä tilaus</button>
     </form>
   </div>
-</section>
-
-<!-- Footer -->
-<footer id="footer">
-  <div class="inner">
-    <p>&copy; 2026 VALKEUS. Kaikki oikeudet pidätetään.</p>
-  </div>
-</footer>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-
-</body>
-</html>
+</secti
