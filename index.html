@@ -8,66 +8,86 @@
 </head>
 <body>
 
-<!-- Header / Banner -->
+<!-- Hero / Banner -->
 <header id="header">
   <h1>VALKEUS</h1>
-  <p>Tuomme valoa arkeen – siivousta, huolenpitoa ja arjen mukavia hetkiä, juuri sinun tarpeidesi mukaan.</p>
+  <p>Tuomme valoa arkeen – siivousta, huolenpitoa ja arjen mukavia hetkiä juuri sinun tarpeidesi mukaan.</p>
   <nav>
     <ul>
       <li><a href="#services">Palvelut</a></li>
-      <li><a href="#contact">Ota yhteyttä</a></li>
+      <li><a href="#order">Tilaa nyt</a></li>
     </ul>
   </nav>
 </header>
 
-<!-- Palvelut / Features -->
+<!-- Palvelut -->
 <section id="services" class="wrapper style2 special">
   <div class="inner">
     <h2>Palvelumme</h2>
     <div class="features">
-      
-      <!-- 1. Siivouspaketit -->
+      <!-- 1. Siivouspaketti -->
       <article>
         <span class="icon fa-broom"></span>
         <div class="content">
-          <h3>Siivouspaketit</h3>
-          <p>Perussiivous tai kattava kotisiivous – imurointi, lattioiden moppaus, kylpyhuoneen ja keittiön puhdistus.  
-          Valitse juuri sinun tarpeisiisi sopiva paketti.</p>
+          <h3>Siivouspaketti</h3>
+          <p>Imurointi, lattian moppaus, kylpyhuone ja keittiö. Valitse tarpeidesi mukaan.</p>
+          <a href="#order" class="button">Tilaa siivous</a>
         </div>
       </article>
-      
+
       <!-- 2. Huolenpito / Hoivapaketti -->
       <article>
         <span class="icon fa-heart"></span>
         <div class="content">
           <h3>Huolenpito & Ajanvietto</h3>
-          <p>Henkilökohtaista huolenpitoa arkeen: kahvihetket, ruokakauppareissut, seura ja virkistävät hetket.  
-          Meidän tavoitteena on tehdä arjestasi mukavampaa ja turvallisempaa.</p>
+          <p>Kahvihetket, ruokakauppareissut, seura ja arjen mukavat hetket.</p>
+          <a href="#order" class="button">Tilaa hoiva</a>
         </div>
       </article>
-      
-      <!-- 3. Kombinaatiot -->
+
+      <!-- 3. Kombinaatiopaketti -->
       <article>
         <span class="icon fa-star"></span>
         <div class="content">
-          <h3>Kombinaatiopaketit</h3>
-          <p>Yhdistämme siivouksen ja huolenpidon tarpeidesi mukaan.  
-          Saat molemmat palvelut yhdessä paketissa – koti siistiksi ja arki sujuvaksi.</p>
+          <h3>Kombinaatiopaketti</h3>
+          <p>Yhdistämme siivouksen ja huolenpidon juuri sinun tarpeidesi mukaan.</p>
+          <a href="#order" class="button">Tilaa kokonaispaketti</a>
         </div>
       </article>
-      
     </div>
   </div>
 </section>
 
-<!-- Call to Action / Yhteydenotto -->
-<section id="contact" class="wrapper style3 special">
+<!-- Tilauslomake -->
+<section id="order" class="wrapper style3 special">
   <div class="inner">
-    <h2>Ota yhteyttä</h2>
-    <p>Lähde rakentamaan valoisampaa arkea kanssamme. Lähetä viesti tai varaa palvelu suoraan!</p>
-    <ul class="actions stacked">
-      <li><a href="mailto:info@valkeus.fi" class="button fit primary">Ota yhteyttä</a></li>
-    </ul>
+    <h2>Tilaa palvelu</h2>
+    <form action="https://formspree.io/f/xxxxxxx" method="POST">
+      <label for="service">Valitse palvelu:</label>
+      <select name="service" id="service" required>
+        <option value="">-- Valitse --</option>
+        <option value="Siivouspaketti">Siivouspaketti</option>
+        <option value="Huolenpito">Huolenpito / Hoivapaketti</option>
+        <option value="Kombinaatiopaketti">Kombinaatiopaketti</option>
+      </select>
+
+      <label for="details">Mitä palveluita haluat sisällyttää?</label>
+      <textarea name="details" id="details" placeholder="Esim. moppaus, kahvihetki..." required></textarea>
+
+      <label for="date">Päivämäärä:</label>
+      <input type="date" name="date" id="date" required>
+
+      <label for="time_start">Aloitusaika:</label>
+      <input type="time" name="time_start" id="time_start" required>
+
+      <label for="time_end">Lopetusaika:</label>
+      <input type="time" name="time_end" id="time_end" required>
+
+      <label for="notes">Lisätiedot / toiveet:</label>
+      <textarea name="notes" id="notes" placeholder="Esim. erityistoiveet..." ></textarea>
+
+      <button type="submit" class="button fit primary">Lähetä tilaus</button>
+    </form>
   </div>
 </section>
 
