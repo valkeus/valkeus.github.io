@@ -8,28 +8,45 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
     body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #F8F8F8; color: #333; margin: 0; }
+
     h1,h2,h3 { font-weight: 700; }
     h2 { text-align: center; margin-top: 2em; }
 
     /* Hero / Banner */
     #header {
-      background: linear-gradient(135deg, #FFB800, #FFD95A);
+      position: relative; 
+      background: linear-gradient(135deg, rgba(255,184,0,0.85), rgba(255,217,90,0.85)), url('assets/images/hero.jpg');
+      background-size: cover;
+      background-position: center;
       color: #fff;
       text-align: center;
       padding: 6em 2em;
-      background-image: url('assets/images/hero.jpg');
-      background-size: cover;
-      background-position: center;
+    }
+    #header h1 {
+      margin: 0;
+      font-size: 4em;
+      position: relative;
+    }
+    #header p {
+      margin-top: 1em;
+      font-size: 1.5em;
+      position: relative;
     }
     #header nav ul {
       list-style: none;
       padding: 0;
-      margin: 1em 0 0 0;
+      margin: 2em 0 0 0;
       display: flex;
       justify-content: center;
       gap: 2em;
     }
-    #header nav ul li a { color: #fff; text-decoration: none; font-weight: bold; font-size: 1.1em; transition: color 0.3s; }
+    #header nav ul li a { 
+      color: #fff; 
+      text-decoration: none; 
+      font-weight: bold; 
+      font-size: 1.1em; 
+      transition: color 0.3s; 
+    }
     #header nav ul li a:hover { color: #fff0c1; }
 
     /* Palvelut / features */
@@ -61,9 +78,21 @@
     }
     .button.primary:hover, .button.fit.primary:hover { background-color: #FF9F00; }
 
-    /* Lomake */
-    form label { font-weight: bold; margin-top: 1em; display: block; }
-    form input, form select, form textarea { width: 100%; padding: 0.6em; margin-top: 0.3em; border-radius: 0.5em; border: 1px solid #ccc; }
+    /* Lomake luksus-tyyli */
+    form { max-width: 500px; margin: 0 auto; }
+    form label { font-weight: bold; margin-top: 1em; display: block; color: #fff; }
+    form input, form select, form textarea { 
+      width: 100%; 
+      padding: 0.8em; 
+      margin-top: 0.3em; 
+      border-radius: 0.8em; 
+      border: 1px solid #ccc; 
+      background: rgba(255,255,255,0.95); 
+      color: #000; 
+      font-size: 1em;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+    }
+    form input:focus, form select:focus, form textarea:focus { border-color: #FFB800; outline: none; }
     form button { margin-top: 1.5em; }
 
     /* Footer */
@@ -101,7 +130,7 @@
         </div>
       </article>
 
-      <!-- Huolenpito / Hoivapaketti -->
+      <!-- Hoivapaketti -->
       <article>
         <img src="assets/images/hoiva.jpg" alt="Hoivapaketti">
         <span class="icon fa-solid fa-heart fa-2x"></span>
@@ -129,8 +158,8 @@
 <!-- Tilauslomake -->
 <section id="order" class="wrapper style3 special">
   <div class="inner">
-    <h2>Tilaa palvelu</h2>
-    <form action="https://formspree.io/f/mzdzolld" method="POST">
+    <h2 style="color:#fff;">Tilaa palvelu</h2>
+    <form action="https://formspree.io/f/xxxxxxx" method="POST">
       <label for="service">Valitse palvelu:</label>
       <select name="service" id="service" required>
         <option value="">-- Valitse --</option>
@@ -157,4 +186,20 @@
       <button type="submit" class="button fit primary">Lähetä tilaus</button>
     </form>
   </div>
-</secti
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="inner">
+    <p>&copy; 2026 VALKEUS. Kaikki oikeudet pidätetään.</p>
+  </div>
+</footer>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
